@@ -1,0 +1,138 @@
+.notification input[type=checkbox]{
+    height: 0;
+    width: 0;
+    visibility: hidden;
+}
+
+.notification label {
+    cursor: pointer;
+    text-indent: -9999px;
+    width: 54px;
+    height: 40px;
+    background: grey;
+    display: block;
+    border-radius: 84px;
+    position: relative;
+}
+
+.notification label:after {
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 30px;
+    height: 30px;
+    background: #fff;
+    border-radius: 90px;
+    transition: 0.3s;
+}
+
+.notification input:checked + label {
+    background: #2196F3;
+}
+
+.notification input:checked + label:after {
+    left: calc(100% - 5px);
+    transform: translateX(-100%);
+}
+
+.notification label:active:after {
+    width: 130px;
+}
+
+.settings-section {
+    display: flex;
+    gap: 50px;
+    max-width: 70%;
+    align-items: self-start;
+    flex-wrap: wrap;
+    margin: 10px 0;
+}
+
+input#ssync_Send {
+    margin-top: 5px;
+}
+
+.settings {flex: 2;}
+
+.credit {flex: 1;}
+
+.status {
+    display: flex;
+    align-items: center;
+}
+
+.site.live-site {flex: 2;}
+
+.site.staging-site {flex: 2;}
+
+.status p {flex: 2;}
+
+.settings {box-shadow: 0px 3px 20px #00000008;background: #fff;padding: 20px;border-radius: 8px;}
+.site {
+    padding: 10px;
+    background: #fff;
+    box-shadow: 0px 3px 10px #00000012;
+    margin: 15px;
+    text-align: center;
+    height: 120px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.credit {
+    box-shadow: 0px 3px 20px #00000008;
+    background: #fff;
+    padding: 20px;
+    text-align: center;
+}
+.form-field {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+.active-site {
+    border: 3px solid #2196F3;
+}
+.hidden{
+    display: none  !important;
+}
+.site input {
+    opacity: 0;
+}
+
+.php-error #adminmenuback, .php-error #adminmenuwrap {
+    margin-top: 0px !important;
+}
+
+.login {
+    display: flex;
+    gap: 20px;
+}
+
+.login form {
+    box-shadow: 0px 3px 10px #0003;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+@media (max-width: 1300px) {
+	.settings-section {
+    display: flex;
+    gap: 50px;
+    max-width: 90%;
+    align-items: self-start;
+    flex-wrap: wrap;
+    margin: 10px 0;
+}
+}
+
+@media (max-width: 768px) {
+	.settings-section {
+    display: flex;
+    gap: 50px;
+    max-width: 100%;
+    align-items: self-start;
+    flex-wrap: wrap;
+    margin: 10px 0;
+}
+}
